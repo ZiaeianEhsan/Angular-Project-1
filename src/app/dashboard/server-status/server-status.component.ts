@@ -9,7 +9,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ServerStatusComponent implements OnInit {
   currentStatus: "online" | "offline" | "unknown" = "online";
-  
+
   private interval?: ReturnType<typeof setInterval>;
   constructor() {}
   ngOnInit() {
@@ -27,5 +27,8 @@ export class ServerStatusComponent implements OnInit {
   }
   ngAfterViewInit() {
     console.log("AFTER VIEW INIT");
+  }
+  ngOnDestroy() {
+    clearTimeout(this.interval);
   }
 }
