@@ -10,15 +10,15 @@
   font-size: 1.15rem;
 }
 
-.status-online p:first-of-type {
+.status.status-online p:first-of-type {
   color: #6a3cb0;
 }
 
-.status-offline p:first-of-type {
+.status.status-offline p:first-of-type {
   color: #b22084;
 }
 
-.status-unknown p:first-of-type {
+.status.status-unknown p:first-of-type {
   color: grey;
 }
 
